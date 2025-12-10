@@ -6,11 +6,11 @@ if [[ "$PWD" != "$HOME/dotfiles" ]]; then
     exit 1
 fi
 
-BASE_PACKAGES="stow hyprland niri xwayland-satellite hyprpaper waybar rofi swaylock dunst polkit-kde-agent grim slurp"
+BASE_PACKAGES="stow hyprland niri xwayland-satellite hyprpaper waybar rofi swaync swaylock polkit-kde-agent wl-clipboard xdg-portal-hyprland grim slurp"
 
 TERMINAL_PACKAGES="alacritty kitty"
 
-AUR_PACKAGES="visual-studio-code-bin ttf-jetbrains-mono-nerd nautilus fish starship fastfetch"
+AUR_PACKAGES="visual-studio-code-bin ttf-jetbrains-mono-nerd nautilus fish starship fastfetch swappy"
 
 echo "Updating system packages..."
 sudo pacman -Syu
