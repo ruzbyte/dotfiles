@@ -1,5 +1,5 @@
-bash ./scripts/minecraftfix.sh
+bash ./minecraftfix.sh
 
 game_apps="steam curseforge minecraft-launcher bottles lutris protonup-qt ryujinx"
 
-paru -S --needed --no-confirm $game_apps
+paru -S --needed $game_apps

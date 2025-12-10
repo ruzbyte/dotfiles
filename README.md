@@ -1,3 +1,3 @@
 # My dotfiles, WIP
 
-Dotfiles for Hyprland, rice in progress
+Dotfiles for Hyprland and Niri, rice in progress

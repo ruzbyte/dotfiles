@@ -43,7 +43,7 @@ WALLPAPER_SOURCE_DIR="$SCRIPT_DIR/wallpapers"
 CONFIG_DEST_DIR="$HOME/.config"
 WALLPAPER_DEST_DIR="$HOME/Pictures"
 
-echo "🚀 Starte die Konfiguration deines Systems..."
+echo "Starte die Konfiguration deines Systems..."
 
 if [ -d "$CONFIG_SOURCE_DIR" ]; then
     echo "-> Kopiere Konfigurationsdateien nach $CONFIG_DEST_DIR..."

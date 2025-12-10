@@ -1,0 +1,58 @@
+[user]
+    name = "ruzbyte"
+    email = "arthuraktamirov@gmail.com"
+
+[core]
+    compression = 9
+    preloadIndex = true
+
+[url "git@github.com:ruzbyte/"]
+    insteadOf = "ruzbyte:"
+
+[url "git@github.com:"]
+    insteadOf = "gh:"
+
+[status]
+    branch = true
+    showStash = true
+    showUntrackedFiles = true
+
+[push]
+    autoSetupRemote = true
+    default = current
+    followTags = true
+
+[pull]
+    default = current
+    rebase = true
+
+[rebase]
+    autoStash = true
+    preserveMerges = true
+    missingCommitsCheck = true
+
+[log]
+    abbrevCommit = true
+    graphColors = blue,yellow,cyan,magenta,green,red
+
+[color "decorate"]
+    HEAD = red
+    branch = blue
+    tag = yellow
+    remoteBranch = magenta
+
+[color "branch"]
+    current = magenta
+    local = default
+    remote = yellow
+    upstream = green
+    plain = blue
+
+[branch]
+    sort = -committerdate
+
+[tag]
+    sort = taggerdate
+
+[commit]
+    template = "~/.config/git/commit.template"
