@@ -15,7 +15,7 @@
         "hyprland/window"
     ],
     "modules-right": [
-        "group/status"
+        "group/status",
     ],
 
     "group/left": {
@@ -31,7 +31,8 @@
             "tray",
             "custom/notification",
             "network",
-            "pulseaudio"
+            "pulseaudio",
+            "custom/logout"
         ]
     },
     "hyprland/workspaces": {
@@ -180,5 +181,10 @@
         "on-click": "swaync-client -t -sw",
         "on-click-right": "swaync-client -d -sw",
         "escape": true
-    }
+    },
+    "custom/logout": {
+        "format": "⏻", // Wähle ein passendes Icon (z.B. Font Awesome: F814)
+        "tooltip": "false",
+        "on-click": "wlogout" // Dies ist der Befehl, der beim Klick ausgeführt wird
+    },
 }

@@ -118,7 +118,8 @@ window#waybar.hidden {
 #clock,
 #custom-power,
 #network,
-#custom-notification {
+#custom-notification,
+#custom-logout {
     background-color: transparent;
     color: @accent-blue;
     padding: 0 6px;
@@ -163,7 +164,8 @@ tooltip, #tray menu {
 #pulseaudio:hover,
 #clock:hover,
 #network:hover,
-#custom-notification:hover {
+#custom-notification:hover,
+#custom-logout:hover {
     background-color: @bg-selected;
     color: @accent-purple;
     border-color: @border-accent;
