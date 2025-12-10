@@ -56,7 +56,8 @@
         "format": "{title}",
         "max-length": 50,
         "icon": true,
-        "separate-outputs": true
+        "separate-outputs": true,
+        "icon-size": 16
     },
     "cpu": {
         "format": "󰓅 {usage:2}%",
@@ -75,7 +76,7 @@
         "tooltip": true
     },
     "tray": {
-        "icon-size": 16,
+        "icon-size": 18,
         "spacing": 5
     },
     "mpris": {
