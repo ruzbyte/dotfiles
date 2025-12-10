@@ -6,20 +6,28 @@ if [[ "$PWD" != "$HOME/dotfiles" ]]; then
     exit 1
 fi
 
-PACMAN_PACKAGES="stow hyprland hyprpaper waybar rofi-wayland alacritty thunar firefox swaylock dunst polkit-kde-agent grim slurp ttf-jetbrains-mono-nerd"
+BASE_PACKAGES="stow hyprland niri xwayland-satellite hyprpaper waybar rofi swaylock dunst polkit-kde-agent grim slurp"
 
-AUR_PACKAGES="visual-studio-code-bin"
+TERMINAL_PACKAGES="alacritty kitty"
 
+AUR_PACKAGES="visual-studio-code-bin ttf-jetbrains-mono-nerd nautilus fish starship fastfetch"
+
+echo "Updating system packages..."
 sudo pacman -Syu
 
-# Install pacman packages
-sudo pacman -S --needed $PACMAN_PACKAGES
 
-# Install AUR packages
+echo "Installing base packages..."
+sudo pacman -S --needed $BASE_PACKAGES
+
+
+echo "Setting up yay AUR helper..."
 ~/scripts/install-yay.sh
+echo "Installing terminal packages..."
+yay -S --needed $TERMINAL_PACKAGES
+echo "Installing AUR packages..."
 yay -S --needed $AUR_PACKAGES
 
 echo "All packages installed successfully"
 
-stow --adopt .
+stow .
 echo "Dotfiles stowed successfully"
