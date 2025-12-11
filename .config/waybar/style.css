@@ -112,6 +112,12 @@ window#waybar.empty #window {
     margin: 0 4px;
 }
 
+#custom-imagestart:hover {
+    background-color: @bg-selected;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
 #cpu:hover,
 #memory:hover,
 #disk:hover {

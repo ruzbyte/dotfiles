@@ -30,7 +30,8 @@
     "custom/imagestart": {
         "format": "   ",
         "tooltip": true,
-        "tooltip-format": "Startmenü öffnen"
+        "tooltip-format": "Startmenü öffnen",
+        "on-click": "rofi -show drun",
     },
     //"image#start": {
     //    "exec": "~/.config/waybar/scripts/start-menu.sh",       
