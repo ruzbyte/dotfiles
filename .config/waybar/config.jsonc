@@ -21,10 +21,24 @@
     "group/left": {
         "orientation": "horizontal",
         "modules": [
+            //"image#start",
+            "custom/imagestart",
             "clock",
             "mpris"
         ]
     },
+    "custom/imagestart": {
+        "format": "   ",
+        "tooltip": true,
+        "tooltip-format": "Startmenü öffnen"
+    },
+    //"image#start": {
+    //    "exec": "~/.config/waybar/scripts/start-menu.sh",       
+    //    "on-click": "rofi -show drun",
+    //    "size": 24,
+    //    "tooltip": true,
+    //    "tooltip-format": "Startmenü öffnen"
+    // },
     "group/status": {
         "orientation": "horizontal",
         "modules": [

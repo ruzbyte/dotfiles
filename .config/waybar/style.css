@@ -67,9 +67,22 @@ window#waybar.hidden {
 }
 
 #window.empty {
-    border: none;
+    background-color: transparent;
     padding: 0;
     margin: 0;
+    border: 0;
+    min-height: 0;
+    min-width: 0;
+}
+
+window#waybar.empty #window {
+    background-color: transparent;
+    color: transparent;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    min-height: 0;
+    min-width: 0;
 }
 
 /* System monitors */
@@ -83,6 +96,20 @@ window#waybar.hidden {
     border-radius: 8px;
     border: 1px solid @border-default;
     min-height: 20px;
+}
+
+#image {
+    margin: 0 2px;
+    padding: 0 4px;
+    border-radius: 8px;
+}
+
+#custom-imagestart {
+    background-image : url('icons/face.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 6px;
+    margin: 0 4px;
 }
 
 #cpu:hover,
@@ -169,6 +196,8 @@ tooltip, #tray menu {
     background-color: @bg-selected;
     color: @accent-purple;
     border-color: @border-accent;
+    font-size: 13px;
+    transition: all 0.3s ease;
 }
 
 
