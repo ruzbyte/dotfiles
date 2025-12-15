@@ -58,6 +58,7 @@ mainbox {
 
 inputbar {
   background-color: @bg-alt;
+  text-color: @fg;
   children: [prompt, entry];
   border-radius: 12px;
   padding: 4px;
@@ -74,6 +75,7 @@ entry {
   font-family: "JetBrainsMono Nerd Font Propo 11";
   background-color: transparent;
   padding: 12px 8px;
+  text-color: @fg;
   placeholder: "Search...";
   placeholder-color: @fg-alt;
 }
