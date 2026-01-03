@@ -9,6 +9,7 @@ import Quickshell.Wayland
 import Quickshell.Widgets
 import qs.config
 
+
 Scope {
     id: root
 
@@ -62,13 +63,6 @@ Scope {
                             Clock {
                                 id: clock
                             }
-
-                            /*
-                            ActiveWindow {
-                                id: activeWindow
-                            }
-                            */
-
                         }
 
                     }

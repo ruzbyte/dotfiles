@@ -29,7 +29,7 @@ Item {
                 property bool isActive: Hyprland.focusedWorkspace && Hyprland.focusedWorkspace.id === workspace.id
 
                 Layout.preferredWidth: isActive ? (contentLayout.implicitWidth + 20) : 30
-                Layout.preferredHeight: 22
+                Layout.preferredHeight: 24
                 
                 radius: 8
                 color: isActive ? Theme.bgSelected : Theme.bgSecondary

@@ -8,17 +8,15 @@ fi
 
 BASE_PACKAGES="stow hyprland niri xwayland-satellite hyprpaper waybar rofi swaync swaylock polkit-kde-agent wl-clipboard xdg-portal-hyprland grim slurp"
 
-TERMINAL_PACKAGES="alacritty kitty"
+TERMINAL_PACKAGES="alacritty kitty linux-wallpaperengine-git"
 
 AUR_PACKAGES="visual-studio-code-bin ttf-jetbrains-mono-nerd nautilus fish starship fastfetch swappy"
 
 echo "Updating system packages..."
 sudo pacman -Syu
 
-
 echo "Installing base packages..."
 sudo pacman -S --needed $BASE_PACKAGES
-
 
 echo "Setting up yay AUR helper..."
 ~/scripts/install-yay.sh
