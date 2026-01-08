@@ -1,6 +1,10 @@
 [user]
     name = "ruzbyte"
     email = "arthuraktamirov@gmail.com"
+    signingKey = ~/.ssh/github_ecdsa
+
+[gpg]
+    format = ssh
 
 [core]
     compression = 9
@@ -56,3 +60,4 @@
 
 [commit]
     template = "~/.config/git/commit.template"
+    gpgsign = true
