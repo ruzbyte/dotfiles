@@ -112,7 +112,7 @@ layout {
 spawn-sh-at-startup "qs -c noctalia-shell"
 spawn-sh-at-startup "mkdir -p ~/Screenshots/"
 
-spawn-sh-at-startup "~/apps/wpeui/wpeui --apply --no-gui"
+spawn-sh-at-startup "~/apps/wpeui/wpeui --apply --nogui"
 
 hotkey-overlay {
     // Uncomment this line to disable the "Important Hotkeys" pop-up at startup.
