@@ -13,7 +13,7 @@ forceBreezeTheme=false
 
 [Window]
 autostartOnLogin=true
-height=1023
+height=1019
 visiblePage=inputPage
 visiblePresetSheetPage=autoloadingPage
-width=943
+width=942

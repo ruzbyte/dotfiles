@@ -2,21 +2,16 @@
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
   "logo": {
     "source": "$(find \"$HOME/.config/fastfetch/logo\" -name \"*.png\")",
-    "height": 18
+    "height": 18,
+    "position": "top"
   },
   "display": {
     "separator": " : "
   },
   "modules": [
     {
-      "type": "command",
-      "key": "  ",
-      "keyColor": "blue",
-      "text": "splash=$(hyprctl splash);echo $splash"
-    },
-    {
       "type": "custom",
-      "format": "┌──────────────────────────────────────────┐"
+      "format": "\n──────────────────────────────────────────────────────────"
     },
     {
       "type": "chassis",
@@ -59,7 +54,7 @@
     },
     {
       "type": "custom",
-      "format": "└──────────────────────────────────────────┘"
+      "format": "──────────────────────────────────────────────────────────"
     },
     "break",
     {
@@ -69,7 +64,7 @@
     },
     {
       "type": "custom",
-      "format": "┌──────────────────────────────────────────┐"
+      "format": "──────────────────────────────────────────────────────────"
     },
     {
       "type": "cpu",
@@ -108,7 +103,7 @@
     },
     {
       "type": "custom",
-      "format": "└──────────────────────────────────────────┘"
+      "format": "──────────────────────────────────────────────────────────"
     },
     {
       "type": "colors",
