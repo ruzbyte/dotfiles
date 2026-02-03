@@ -8,13 +8,13 @@ environment {
 
 xwayland-satellite {
     // off
-    path "xwayland-satellite"
+    // path "xwayland-satellite"
 }
 
 
 cursor {
-    xcursor-theme "breeze_cursors"
-    xcursor-size 24
+    xcursor-theme "Adwaita"
+    xcursor-size 18
 
     hide-when-typing
     hide-after-inactive-ms 1000
@@ -56,6 +56,7 @@ input {
 output "DP-1" {
 	mode "1920x1080@144.000"
 	position x=0 y=0
+  focus-at-startup
 }
 
 output "HDMI-A-1" {
@@ -105,6 +106,10 @@ layout {
         // top 64
         // bottom 64
     }
+}
+
+overview {
+    zoom 0.75
 }
 
 
