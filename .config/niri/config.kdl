@@ -1,9 +1,10 @@
 prefer-no-csd
 
 include "colors.kdl"
+include "windowrules.kdl"
 
 environment {
-    QT_QPA_PLATFORMTHEME "qt6ct"
+    QT_QPA_PLATFORMTHEME "gtk3"
 }
 
 xwayland-satellite {
@@ -190,7 +191,7 @@ binds {
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+Return hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Mod+Space hotkey-overlay-title="Run an Application: Shell" { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
-
+    Mod+E hotkey-overlay-title="Open File Explorer" { spawn "nautilus"; }
     Super+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
     Super+Comma hotkey-overlay-title="Show Settings" { spawn-sh "qs -c noctalia-shell ipc call settings toggle"; }
     Super+C hotkey-overlay-title="Open Code Editor" { spawn "code"; }
