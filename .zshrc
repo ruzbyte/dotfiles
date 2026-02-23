@@ -2,19 +2,26 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
 
+[ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
+[ -f /usr/share/fzf/completion.zsh ] && source /usr/share/fzf/completion.zsh
+
+
+setopt AUTO_CD              # Ordnername tippen genügt zum Wechseln
+setopt CORRECT
 HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE=~/.zsh_history
 
-alias ls='ls --color=auto'
-alias ll='ls -l'
-alias la='ls -a'
-alias lla='ls -la'
-alias lah='ls -lah'
+zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list 'm:{a-z1-2}={A-Z1-2}'
 
-alias ..='cd ..'
-alias ~='cd ~'
+alias ls='eza --icons --group-directories-first'
+alias ll='eza -l --icons --group-directories-first'
+alias la='eza -a --icons'
+alias lla='eza -la --icons'
+alias tree='eza --tree --icons'
 
 alias gs='git status'
 alias ga='git add'
@@ -38,3 +45,10 @@ alias dcu='docker compose up'
 alias dcd='docker compose down'
 alias dl='docker logs -f'
 alias dps='docker ps'
+
+alias zconf='nvim ~/dotfiles/.zshrc'
+alias hyprconf='nvim ~/dotfiles/.config/hypr/'
+alias niriconf='nvim ~/dotfiles/.config/niri/'
+alias zsrc='source ~/.zshrc'
+
+fastfetch
