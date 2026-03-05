@@ -3,9 +3,8 @@
 -- Add any additional keymaps here
 
 -- Shift / + = Select Word and view
-
-vim.keymap.set("n", "<leader>cd", vim.cmd.Ex)
 vim.g.mapleader = " "
+vim.keymap.set("n", "<leader>cd", vim.cmd.Ex)
 
 -- Zeilen verschieben mit Alt + Pfeiltasten (Normal Mode)
 vim.keymap.set("n", "<A-Up>", "<cmd>m .-2<cr>==", { desc = "Move line up" })
@@ -29,3 +28,7 @@ vim.keymap.set("n", "<leader>Y", '"+Y', { desc = "Yank to system clipboard (line
 vim.keymap.set("n", "<leader>d", '"_d', { desc = "Delete without replacing the default register" })
 vim.keymap.set("v", "<leader>d", '"_d', { desc = "Delete without replacing the default register" })
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<cr>")
+
+vim.keymap.set({ "i", "x", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save File" })
+
+vim.keymap.set("n", "<leader>fn", ":e %:h/", { desc = "New file in current dir" })

@@ -52,3 +52,12 @@ alias niriconf='nvim ~/dotfiles/.config/niri/'
 alias zsrc='source ~/.zshrc'
 
 fastfetch
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
+
+# bun completions
+[ -s "/home/ruzbyte/.bun/_bun" ] && source "/home/ruzbyte/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
