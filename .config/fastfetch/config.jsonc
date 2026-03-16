@@ -3,17 +3,13 @@
   "logo": {
     "type": "kitty-icat",
     "source": "$(find \"$HOME/.config/fastfetch/logo\" -type f \\( -name \"*.png\" -o -name \"*.gif\" -o -name \"*.webp\" \\) | shuf -n 1)",
-    "height": 18,
-    "position": "top",
+    "width": 30,
+    "position": "left",
   },
   "display": {
     "separator": " : ",
   },
   "modules": [
-    {
-      "type": "custom",
-      "format": "\n──────────────────────────────────────────────────────────",
-    },
     {
       "type": "chassis",
       "key": "  󰇺 Chassis",

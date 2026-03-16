@@ -18,6 +18,13 @@ return {
                 window = {
                     width = 30, -- Breite des Seitenfensters
                 },
+                filesystem = {
+                    filtered_items = {
+                        visible = true,
+                        hide_dotfiles = false,
+                        hide_gitignored = true,
+                    },
+                },
             })
 
             -- Keymap zum Öffnen/Schließen (Space + e wie in LazyVim)
