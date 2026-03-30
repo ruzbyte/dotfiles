@@ -1,7 +1,7 @@
 prefer-no-csd
 
 include "colors.kdl"
-// include "windowrules.kdl"
+include "windowrules.kdl"
 
 environment {
     QT_QPA_PLATFORMTHEME "gtk3"
@@ -9,13 +9,13 @@ environment {
 
 xwayland-satellite {
     // off
-    // path "xwayland-satellite"
+    path "xwayland-satellite"
 }
 
 
 cursor {
-    xcursor-theme "Adwaita"
-    xcursor-size 18
+    xcursor-theme "breeze_cursors"
+    xcursor-size 24
 
     hide-when-typing
     hide-after-inactive-ms 1000
@@ -52,17 +52,6 @@ input {
     // Focus windows and outputs automatically when moving the mouse into them.
     // Setting max-scroll-amount="0%" makes it work only on windows already fully on screen.
     focus-follows-mouse max-scroll-amount="0%"
-}
-
-output "DP-1" {
-	mode "1920x1080@144.000"
-	position x=0 y=0
-  focus-at-startup
-}
-
-output "HDMI-A-1" {
-	mode "1920x1080@74.973"
-	position x=-1920 y=0
 }
 
 layout {
@@ -109,10 +98,6 @@ layout {
     }
 }
 
-overview {
-    zoom 0.75
-}
-
 
 // This line starts waybar, a commonly used bar for Wayland compositors.
 spawn-sh-at-startup "qs -c noctalia-shell"
@@ -153,8 +138,8 @@ window-rule {
 }
 
 layer-rule {
-  match namespace="^linux-wallpaperengine*"
-  place-within-backdrop true
+    match namespace="^noctalia-overview*"
+    place-within-backdrop true
 }
 
 // Open the Firefox picture-in-picture player as floating by default.
@@ -195,7 +180,7 @@ binds {
     Super+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
     Super+Comma hotkey-overlay-title="Show Settings" { spawn-sh "qs -c noctalia-shell ipc call settings toggle"; }
     Super+C hotkey-overlay-title="Open Code Editor" { spawn "code"; }
-    Super+B hotkey-overlay-title="Open Browser" { spawn "brave"; }
+    Super+B hotkey-overlay-title="Open Browser" { spawn "brave-nightly"; }
 
     Mod+V hotkey-overlay-title="Run an Application: Applauncher" { spawn-sh "qs -c noctalia-shell ipc call launcher clipboard"; }
     Mod+A hotkey-overlay-title="Open control center" { spawn-sh "qs -c noctalia-shell ipc call controlCenter toggle"; }
@@ -394,12 +379,6 @@ binds {
     // Mod+Shift+Space { switch-layout "prev"; }
 
     Print { screenshot; }
-    Ctrl+Print { screenshot-screen; }
-    Alt+Print { screenshot-window; }
-    Shift+Mod+S { screenshot; }
-
-    // Applications such as remote-desktop clients and software KVM switches may
-    // request that niri stops processing the keyboard shortcuts defined here
     // so they may, for example, forward the key presses as-is to a remote machine.
     // It's a good idea to bind an escape hatch to toggle the inhibitor,
     // so a buggy application can't hold your session hostage.
@@ -417,4 +396,3 @@ binds {
 debug {
     honor-xdg-activation-with-invalid-serial
 }
-
