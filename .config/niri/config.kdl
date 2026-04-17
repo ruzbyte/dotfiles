@@ -5,6 +5,7 @@ include "windowrules.kdl"
 
 environment {
     QT_QPA_PLATFORMTHEME "gtk3"
+    GSK_RENDERER "cairo"
 }
 
 xwayland-satellite {
@@ -20,6 +21,7 @@ cursor {
     hide-when-typing
     hide-after-inactive-ms 1000
 }
+
 input {
     keyboard {
         xkb {
@@ -57,7 +59,7 @@ input {
 output "DP-1" {
 	mode "1920x1080@144.000"
 	position x=0 y=0
-  focus-at-startup
+        focus-at-startup
 }
 
 output "HDMI-A-1" {
@@ -192,7 +194,7 @@ binds {
     Super+Comma hotkey-overlay-title="Show Settings" { spawn-sh "qs -c noctalia-shell ipc call settings toggle"; }
     Super+C hotkey-overlay-title="Open Code Editor" { spawn "code"; }
     Super+B hotkey-overlay-title="Open Browser" { spawn "brave"; }
-
+    Mod+Shift+S hotkey-overlay-title="Take screenshot" { screenshot; }
     Mod+V hotkey-overlay-title="Run an Application: Applauncher" { spawn-sh "qs -c noctalia-shell ipc call launcher clipboard"; }
     Mod+A hotkey-overlay-title="Open control center" { spawn-sh "qs -c noctalia-shell ipc call controlCenter toggle"; }
     Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
@@ -407,3 +409,6 @@ binds {
 debug {
     honor-xdg-activation-with-invalid-serial
 }
+
+include "./noctalia.kdl"
+

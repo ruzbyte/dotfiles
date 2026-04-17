@@ -10,3 +10,4 @@ vim.opt.shiftwidth = 4
 
 vim.opt.clipboard = "unnamedplus"
 vim.opt.showmode = false
+vim.opt.fillchars = { eob = " " }

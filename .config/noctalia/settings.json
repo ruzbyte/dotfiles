@@ -98,14 +98,25 @@
                     "showBadge": true,
                     "showLabelsOnlyWhenOccupied": true,
                     "unfocusedIconsOpacity": 1
+                },
+                {
+                    "colorizeIcons": false,
+                    "hideMode": "hidden",
+                    "id": "ActiveWindow",
+                    "maxWidth": 145,
+                    "scrollingMode": "hover",
+                    "showIcon": true,
+                    "showText": true,
+                    "textColor": "none",
+                    "useFixedWidth": false
                 }
             ],
             "left": [
                 {
                     "colorizeDistroLogo": false,
-                    "colorizeSystemIcon": "none",
-                    "customIconPath": "",
-                    "enableColorization": false,
+                    "colorizeSystemIcon": "primary",
+                    "customIconPath": "/home/ruzbyte/Bilder/lilith_monochrome_clean.png",
+                    "enableColorization": true,
                     "icon": "noctalia",
                     "id": "ControlCenter",
                     "useDistroLogo": false
@@ -131,17 +142,6 @@
                     "textColor": "none",
                     "useMonospaceFont": true,
                     "usePadding": false
-                },
-                {
-                    "colorizeIcons": false,
-                    "hideMode": "hidden",
-                    "id": "ActiveWindow",
-                    "maxWidth": 145,
-                    "scrollingMode": "hover",
-                    "showIcon": true,
-                    "showText": true,
-                    "textColor": "none",
-                    "useFixedWidth": false
                 },
                 {
                     "colorizeIcons": false,
@@ -179,7 +179,7 @@
                     ],
                     "chevronColor": "none",
                     "colorizeIcons": true,
-                    "drawerEnabled": true,
+                    "drawerEnabled": false,
                     "hidePassive": false,
                     "id": "Tray",
                     "pinned": [
@@ -223,6 +223,19 @@
                     "id": "Battery",
                     "showNoctaliaPerformance": false,
                     "showPowerProfiles": false
+                },
+                {
+                    "defaultSettings": {
+                        "activeColor": "primary",
+                        "camFilterRegex": "",
+                        "enableToast": true,
+                        "hideInactive": false,
+                        "iconSpacing": 4,
+                        "inactiveColor": "none",
+                        "micFilterRegex": "",
+                        "removeMargins": false
+                    },
+                    "id": "plugin:privacy-indicator"
                 }
             ]
         }
@@ -256,7 +269,7 @@
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "monitorForColors": "",
-        "predefinedScheme": "Tokyo Night",
+        "predefinedScheme": "Catppuccin",
         "schedulingMode": "off",
         "syncGsettings": true,
         "useWallpaperColors": true
@@ -284,7 +297,7 @@
                 "id": "media-sysmon-card"
             },
             {
-                "enabled": false,
+                "enabled": true,
                 "id": "brightness-card"
             }
         ],
@@ -326,18 +339,6 @@
             {
                 "name": "DP-1",
                 "widgets": [
-                    {
-                        "hideMode": "idle",
-                        "id": "MediaPlayer",
-                        "roundedCorners": true,
-                        "showAlbumArt": true,
-                        "showBackground": true,
-                        "showButtons": true,
-                        "showVisualizer": true,
-                        "visualizerType": "wave",
-                        "x": 100,
-                        "y": 200
-                    }
                 ]
             }
         ],
@@ -345,19 +346,19 @@
     },
     "dock": {
         "animationSpeed": 1,
-        "backgroundOpacity": 0.7000000000000001,
+        "backgroundOpacity": 0.86,
         "colorizeIcons": false,
-        "deadOpacity": 0.6,
+        "deadOpacity": 0.6900000000000001,
         "displayMode": "auto_hide",
         "dockType": "floating",
         "enabled": true,
-        "floatingRatio": 1,
+        "floatingRatio": 0.51,
         "groupApps": false,
         "groupClickAction": "cycle",
         "groupContextMenuMode": "extended",
         "groupIndicatorStyle": "dots",
         "inactiveIndicators": true,
-        "indicatorColor": "primary",
+        "indicatorColor": "none",
         "indicatorOpacity": 0.6,
         "indicatorThickness": 3,
         "launcherIcon": "",
@@ -374,17 +375,17 @@
         "showDockIndicator": false,
         "showLauncherIcon": false,
         "sitOnFrame": false,
-        "size": 0.9
+        "size": 0.99
     },
     "general": {
         "allowPanelsOnScreenWithoutBar": true,
         "allowPasswordWithFprintd": false,
         "animationDisabled": false,
-        "animationSpeed": 1,
+        "animationSpeed": 1.1,
         "autoStartAuth": false,
-        "avatarImage": "/home/ruzbyte/Bilder/wallhaven-e87mqo.jpg",
+        "avatarImage": "/home/ruzbyte/Bilder/2cf13c9b16e68774aeaaa12f812d0f0e25a56548.gif",
         "boxRadiusRatio": 1,
-        "clockFormat": "hh\\nmm",
+        "clockFormat": "HH:mm ",
         "clockStyle": "custom",
         "compactLockScreen": false,
         "dimmerOpacity": 0.6,
@@ -420,14 +421,14 @@
         },
         "language": "en",
         "lockOnSuspend": true,
-        "lockScreenAnimations": false,
-        "lockScreenBlur": 0,
+        "lockScreenAnimations": true,
+        "lockScreenBlur": 0.1,
         "lockScreenCountdownDuration": 10000,
         "lockScreenMonitors": [
         ],
         "lockScreenTint": 0,
         "passwordChars": false,
-        "radiusRatio": 1,
+        "radiusRatio": 0.6,
         "reverseScroll": false,
         "scaleRatio": 1,
         "screenRadiusRatio": 1,
@@ -469,6 +470,7 @@
     },
     "location": {
         "analogClockInCalendar": false,
+        "autoLocate": false,
         "firstDayOfWeek": -1,
         "hideWeatherCityName": false,
         "hideWeatherTimezone": false,
@@ -479,7 +481,8 @@
         "use12hourFormat": false,
         "useFahrenheit": false,
         "weatherEnabled": true,
-        "weatherShowEffects": true
+        "weatherShowEffects": true,
+        "weatherTaliaMascotAlways": false
     },
     "network": {
         "bluetoothAutoConnect": true,
@@ -609,6 +612,13 @@
                 "command": "",
                 "countdownEnabled": true,
                 "enabled": true,
+                "keybind": "7"
+            },
+            {
+                "action": "userspaceReboot",
+                "command": "",
+                "countdownEnabled": true,
+                "enabled": false,
                 "keybind": ""
             }
         ],
@@ -643,15 +653,11 @@
         "activeTemplates": [
             {
                 "enabled": true,
-                "id": "gtk"
-            },
-            {
-                "enabled": true,
-                "id": "qt"
-            },
-            {
-                "enabled": true,
                 "id": "alacritty"
+            },
+            {
+                "enabled": true,
+                "id": "code"
             },
             {
                 "enabled": true,
@@ -659,7 +665,27 @@
             },
             {
                 "enabled": true,
-                "id": "code"
+                "id": "qt"
+            },
+            {
+                "enabled": true,
+                "id": "gtk"
+            },
+            {
+                "enabled": true,
+                "id": "niri"
+            },
+            {
+                "enabled": true,
+                "id": "kitty"
+            },
+            {
+                "enabled": true,
+                "id": "zenBrowser"
+            },
+            {
+                "enabled": true,
+                "id": "cava"
             }
         ],
         "enableUserTheming": false
@@ -676,13 +702,13 @@
         "settingsPanelMode": "centered",
         "settingsPanelSideBarCardStyle": false,
         "tooltipsEnabled": true,
-        "translucentWidgets": false
+        "translucentWidgets": true
     },
     "wallpaper": {
         "automationEnabled": false,
         "directory": "/home/ruzbyte/wallpapers",
-        "enableMultiMonitorDirectories": false,
-        "enabled": false,
+        "enableMultiMonitorDirectories": true,
+        "enabled": true,
         "favorites": [
         ],
         "fillColor": "#000000",
@@ -696,7 +722,7 @@
         "overviewTint": 0.6,
         "panelPosition": "follow_bar",
         "randomIntervalSec": 300,
-        "setWallpaperOnAllMonitors": true,
+        "setWallpaperOnAllMonitors": false,
         "showHiddenFiles": false,
         "skipStartupTransition": false,
         "solidColor": "#1a1a2e",

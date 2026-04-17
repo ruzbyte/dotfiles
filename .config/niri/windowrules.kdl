@@ -1,8 +1,33 @@
 window-rule {
+    match app-id="kitty"
+    open-maximized false
+
+    background-effect {
+	blur true
+    }
+}
+
+window-rule {
+    match app-id="zen-browser"
+    open-maximized false
+    
+    background-effect {
+	blur true
+    }
+}
+
+window-rule {
+    match app-id="jetbrains-idea"
+    match app-id="Spotify"
+    match app-id="code"
+    match app-id="brave-browser*"
+    match app-id="vesktop"
+    default-column-width { proportion 0.5; }
     open-maximized true
 }
 
 window-rule {
-    match app-id="kitty"
-    open-maximized false
+    match app-id="jetbrains-idea"
+    match app-id="steam_app_default"
+    open-on-output "DP-1"
 }
