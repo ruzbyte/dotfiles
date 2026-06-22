@@ -1,5 +1,5 @@
 { self, ... }: {
-  flake.nixosModules.development = { pkgs, ... }: {
+  flake.nixosModules.development = { ... }: {
     imports = [
       self.nixosModules.android
       self.nixosModules.flutter
@@ -10,15 +10,7 @@
       self.nixosModules.java
       self.nixosModules.git
       self.nixosModules.docker
-    ];
-
-    environment.systemPackages = with pkgs; [
-      zed-editor
-      vscode
-      nil
-      nixfmt
-      nixd
-      gcc
+      self.nixosModules.ides
     ];
   };
 }

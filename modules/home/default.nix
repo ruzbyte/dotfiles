@@ -31,9 +31,6 @@
         self.homeModules.starship
         self.homeModules.dotnet
         self.homeModules.git
-        self.homeModules.gtk
-        self.homeModules.kde
-        self.homeModules.icons
       ];
     };
   };

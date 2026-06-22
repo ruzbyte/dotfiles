@@ -10,13 +10,16 @@
       self.nixosModules.steam
       self.nixosModules.audio
       self.nixosModules.terminal
-      self.nixosModules.home
       self.nixosModules.music
       self.nixosModules.chat
       self.nixosModules.browser
       self.nixosModules.misc
       self.nixosModules.ssh
       self.nixosModules.fonts
+
+      # home modules
+      self.nixosModules.home
+      self.nixosModules.home-desktop
     ];
   };
 }

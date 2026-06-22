@@ -4,7 +4,7 @@
       dotnet-sdk
       nuget
       mono
-      jetbrains.rider
+
     ];
   };
 

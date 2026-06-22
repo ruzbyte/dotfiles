@@ -15,7 +15,6 @@
     {
       environment.systemPackages = [
         pkgs.uv
-        pkgs.poetry
         pkgs.ruff
         pythonEnv
       ];

@@ -5,5 +5,12 @@
       self.nixosModules.plasma
       self.nixosModules.avatar
     ];
+
+    environment.systemPackages = with pkgs; [
+      ffmpeg
+      poppler # pdf
+      resvg # svg
+      imagemagick # imgs HEIC/JPEG
+    ];
   };
 }

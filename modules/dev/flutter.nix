@@ -9,7 +9,6 @@
         ninja
         pkg-config
         mesa-demos
-        google-chrome
       ];
     };
 }

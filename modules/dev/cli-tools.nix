@@ -3,6 +3,11 @@
     environment.systemPackages = with pkgs; [
       claude-code
       codex
+
+      nil
+      nixfmt
+      nixd
+      gcc
     ];
   };
 }

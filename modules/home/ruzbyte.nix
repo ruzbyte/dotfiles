@@ -34,5 +34,10 @@
         source = self + /icons/lilith_monochrome_clean.png;
       };
 
+      home.sessionVariables = {
+        EDITOR = "nvim";
+        VISUAL = "nvim";
+        BROWSER = "zen";
+      };
     };
 }

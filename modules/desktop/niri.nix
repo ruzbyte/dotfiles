@@ -5,6 +5,8 @@
     };
 
     environment.systemPackages = with pkgs; [
+      kitty
+
       wl-clipboard
       cliphist
       noctalia-shell

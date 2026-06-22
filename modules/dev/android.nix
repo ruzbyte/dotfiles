@@ -2,7 +2,6 @@
   flake.nixosModules.android = { pkgs, ... }: {
     environment.systemPackages = [
       pkgs.android-tools
-      pkgs.android-studio
     ];
 
     programs.nix-ld.enable = true;
